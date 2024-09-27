@@ -10,7 +10,7 @@ const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
   const loginAction = async (data) => {
     try {
-      const response = await fetch("http://localhost:8000/api/login", {
+      const response = await fetch("https://book-store-backend-i9b4.onrender.com/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

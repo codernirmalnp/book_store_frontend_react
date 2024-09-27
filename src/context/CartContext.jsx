@@ -14,7 +14,7 @@ export const CartProvider = ({ children }) => {
 
   const addToCart = async (bookId, quantity) => {
     try {
-      const res = await axiosInstance.post('http://localhost:8000/api/cart', { book_id: bookId, quantity });
+      const res = await axiosInstance.post('/cart', { book_id: bookId, quantity });
      
    
 
@@ -26,7 +26,7 @@ export const CartProvider = ({ children }) => {
 
   const updateCartItem = async ({itemId, quantity}) => {
     try {
-      const response = await axiosInstance.put(`http://localhost:8000/api/cart//api/cart`, { quantity });
+      const response = await axiosInstance.put(`cart/api/cart`, { quantity });
       setCart((prevCart) =>
         prevCart.map((item) => (item.id === itemId ? response.data : item))
       );
@@ -37,7 +37,7 @@ export const CartProvider = ({ children }) => {
 
   const removeCartItem = async (itemId) => {
     try {
-      await axiosInstance.delete(`http://localhost:8000/api/cart//api/cart/${itemId}`);
+      await axiosInstance.delete(`/cart/${itemId}`);
       setCart((prevCart) => prevCart.filter((item) => item.id !== itemId));
     } catch (error) {
       console.error('Error removing cart item:', error);

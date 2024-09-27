@@ -32,7 +32,7 @@ function CartPage() {
     const updateCartItem = async ({ id, qty }) => {
 
         try {
-            const response = await axiosInstance.put(`http://localhost:8000/api/cart/${id}`, { quantity: qty });
+            const response = await axiosInstance.put(`/cart/${id}`, { quantity: qty });
             return response.data;
         } catch (error) {
             console.error('Error updating cart item:', error);
@@ -57,7 +57,7 @@ function CartPage() {
 
     const removeCartItem = async (id) => {
         try {
-            const response = await axiosInstance.delete(`http://localhost:8000/api/cart/${id}`);
+            const response = await axiosInstance.delete(`/cart/${id}`);
             return response.data;
 
         } catch (error) {
@@ -75,7 +75,7 @@ function CartPage() {
     });
     const orderCartItem = async (id) => {
         try {
-            const response = await axiosInstance.post(`http://localhost:8000/api/order`);
+            const response = await axiosInstance.post(`/order`);
             return response.data;
 
         } catch (error) {
