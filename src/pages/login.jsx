@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/card"
 import {
     Input
-} from "@/components/ui/Input"
+} from "@/components/ui/input"
 import { useAuth } from '@/context/AuthContext'
 import MainPageLayout from '@/MainPageLayout'
 

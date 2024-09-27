@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/card"
 import {
     Input
-} from "@/components/ui/Input"
+} from "@/components/ui/input"
 import { useMutation } from 'react-query'
 
 
