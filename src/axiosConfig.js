@@ -4,7 +4,7 @@ import axios from 'axios';
 
 // Create an Axios instance
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:8000/api', // Replace with your API base URL
+  baseURL: 'https://book-store-backend-i9b4.onrender.com/api', // Replace with your API base URL
   timeout: 10000, // Optional: set a timeout (in milliseconds)
   headers: {
     'Content-Type': 'application/json', // Default content type
