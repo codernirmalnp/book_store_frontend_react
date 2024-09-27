@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Link } from 'react-router-dom'
 import UserNav from "./UserNav"
 import { useAuth } from "@/context/AuthContext"
+import axiosInstance from "@/axiosConfig"
 
 export default function Navbar() {
     const { user ,logOut} = useAuth()
@@ -31,6 +32,7 @@ export default function Navbar() {
                         <Link to="/cart" className="flex w-full items-center py-2 text-lg font-semibold" >
                             Cart
                         </Link>
+                        <Button onClick={()=>    axiosInstance.post('/logout').then(()=> logOut())}> logout</Button>
 
 
 
