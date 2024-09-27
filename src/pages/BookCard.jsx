@@ -20,7 +20,7 @@ export default function BookCard({ book }) {
   const addToCart = async ({bookId, quantity}) => {
  
     try {
-      const res = await axiosInstance.post('http://localhost:8000/api/cart', { book_id: bookId, quantity });
+      const res = await axiosInstance.post('/cart', { book_id: bookId, quantity });
       return res.data;
 
 
@@ -46,7 +46,7 @@ export default function BookCard({ book }) {
     <Card className="w-62 bg-white border  border-gray-200 rounded-lg shadow-md overflow-hidden" >
       <img
         className="w-full h-48 w-62  object-cover"
-        src={`http://localhost:8000/${book?.cover_image}`}
+        src={`https://book-store-backend-i9b4.onrender.com/${book?.cover_image}`}
         alt={book.name}
       />
       <CardContent className="p-4 space-y-4">
