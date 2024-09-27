@@ -24,8 +24,9 @@ const AuthProvider = ({ children }) => {
         setToken(res.token);
         localStorage.setItem("site", res.token);
         localStorage.setItem("user", JSON.stringify(res.user_data));
-        toast.success("Login Successfull")
+       
         navigate("/");
+        toast.success("Login Successfull")
       
         return;
       }
